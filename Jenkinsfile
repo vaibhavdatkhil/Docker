@@ -3,12 +3,7 @@ pipeline {
 
     stages {
 
-        stage('Checkout Code') {
-            steps {
-                git 'https://github.com/vaibhavdatkhil/docker.git'
-            }
-        }
-
+    
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t devops-app .'
